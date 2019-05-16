@@ -1,0 +1,88 @@
+html, body{
+	padding: 0;
+	margin: 0;
+}
+
+.toggle_btn {
+	height: 40px;
+	width: 50px;
+	position: relative;
+	float: left;
+	margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    bottom: 11px;
+	cursor: pointer;
+}
+
+.toggle_btn span{
+	height: 3px;
+	background-color: #2c3e50;
+	width: 30px;
+	position: absolute;
+	top: 18px;
+	left: 10px;
+}
+
+.toggle_btn span:before {
+	content: '';
+	height: 3px;
+	background-color: #2c3e50;
+	width: 30px;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+
+.toggle_btn span:after {
+	content: '';
+	height: 3px;
+	background-color: #2c3e50;
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+.menu{
+	height: 500px;
+	background-color:bisque;
+	width: 200px;
+    border: 1px outset #2c3e50;
+}
+
+.menu a{
+	color: #000000;
+    font-size: 1.5em;
+	font-variant: small-caps;
+	text-align: center;
+	display: block;
+	padding-top: 30px;
+	text-decoration: none;
+}
+
+.logo{
+	text-transformation: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.nav{
+    position: absolute;
+    visibility: hidden;
+	margin-left: -200px;
+	transition-duration: 0.2s;
+
+}
+
+.nav_open{
+    visibility: visible;
+	margin-left: 0;
+	transition-duration: 0.2s;
+    
+}
+
+
+
+
+

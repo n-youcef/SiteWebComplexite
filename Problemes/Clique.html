@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Clique</title>
+    
+    <!-- Fichier CSS: MENU --> 
+    <link href="../css/Menu.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Fichier CSS: Feuille de style générale (pour tout le site web) --> 
+    <link href="../css/Css_General.css" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- PROVISOIRE !!!!!!!!!!!!!!!!!!!  ->
+    <!-- Fichier CSS: Feuille de style générale de tout le site web (responsive) -->
+    <link href="../css/Clique.css" rel="stylesheet" type="text/css" /> <!-- MODIFIER LE NOM DU FICHIER!!!!!!!!!!! -->
+    
+    
+        
+
+    
+    <!-- CSS et SCRIPT: pour la création de graphes -->
+    <!-- Ces deux fichiers sont importés de la librairie vis (nom dossier: node_modules) -->
+    <script type="text/javascript" src="../node_modules/vis/dist/vis.js"></script>
+    <link href="../node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+    
+    
+    
+    <!-- CSS et SCRIPT: pour les popups qui affichent les définitions -->
+    <link rel="stylesheet" type="text/css" href="../css/DefinitionBulle.css" />
+    <script src="../js/DefinitionBulle.js" type="text/javascript"></script>
+    
+    <!-- SCRIPT: pour afficher les formules mathématique avec LaTeX -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    
+    <!-- style pour le vid qui contient le graphe-->
+    <!-- ATTENTION!!!: à enlever d'ici par la suite: ce n'est que temporaire -->
+    
+</head>
+
+<body>
+
+    <div id="blocPrincipal">
+        
+        <header>
+            <div class="toggle_btn"><span></span></div>
+            <h1>Problème NP-Complet</h1>
+        </header>
+
+        <!--  /////---------------  MENU  ---------------/////  -->
+        <nav>
+            <div class="menu nav">
+                <a href="Clique.html" title="Clique">Clique</a>
+                <a href="EnsembleIndependant.html" title="EnsembleIndependant">Ensemble Indépendant</a>
+                <a href="SAT3.html" title="SAT3">3-SAT</a>
+                <a href="SetPacking.html" title="SetPacking">Set Packing</a>
+                <a href="NodeCover.html" title="NodeCover">Node Cover</a>
+            </div>
+            <script type="text/javascript" src="../js/Menu.js"></script>
+        </nav>
+        <!--  /////---------------  MENU  ---------------/////  -->
+        
+        
+        <section>
+
+            <div id="divDefinition" class="infobulle"></div>
+
+            
+            <div id="divIntro">
+                <p id="paragrapheIntro"><span class="gras">Clique</span><br>
+                <span class="italique">entrée:</span> Un graphe non-orienté \(G = (V, E)\) et un entier \(k\) <br>
+                    <span class="italique">question:</span> \(G\) contient-il une <span onmouseover="definir('Clique');" onmouseout="cacher();">clique</span><!--\(^1\)--> de taille \(k\)?</p>
+            </div>
+
+            
+            <div id="divBouttonsExemples">
+                <button id="btn1" class="bouttonsExemples" onclick="afficherExemple(1);">Exemple 1</button>
+                <button id="btn2" class="bouttonsExemples" onclick="afficherExemple(2);">Exemple 2</button>
+                <button id="btn3" class="bouttonsExemples" onclick="afficherExemple(3);">Exemple 3</button>
+                <button id="btn4" class="bouttonsExemples" onclick="afficherExemple(4);">Exemple 4</button>
+            </div>
+            
+            <!-- DIV contenant le(s) graphe(s) -->
+            <div id="divGraphe"></div>
+            
+            <div id="divQuestionClique">
+                <p id="questionClique">G contient-il une clique de taille 3?</p>
+                <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
+                <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
+                <p id="reponseClique"></p>
+            </div>
+        </section>
+
+        <footer>
+            <!-- A VOIR PAR LA SUITE !!!!!!!!!  -->
+        </footer>
+    </div>
+
+    <script src="../js/Js_Clique/Graphes.js" type="text/javascript"></script>
+    <script src="../js/Js_Clique/ExemplesClique.js" type="text/javascript"></script>
+    
+   
+</body>
+
+</html>
