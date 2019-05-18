@@ -8,7 +8,7 @@ h1{
 }
 
 #paragrapheIntro{
-    margin: 10px;
+    margin: 5px 10px;
     padding: 0px;
 }
 
@@ -19,28 +19,28 @@ h1{
 
 
 #divGraphe {
-            margin: 0 auto;
-            width: 700px;
-            height: 400px;
-            border-radius: 3px ;
-            border: 1px solid #000000;
-        }
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 700px;
+    height: 300px;
+    border-radius: 3px ;
+    border: 1px solid #000000;
+}
 
 
 .bouttonsExemples {
     background-color: white;
     border: 1px solid black;
     border-radius: 3px;
-
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .bouttonsExemples:hover {
@@ -54,16 +54,15 @@ h1{
     background-color: white;
     border: 1px solid black;
     border-radius: 3px;
-
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 #buttonOui:hover {
@@ -84,7 +83,6 @@ h1{
         width:800px; 
         margin:0 auto;
         /*border: 1px solid #2c3e50;*/
-        padding: 10px;
     }
     
     header{
@@ -94,7 +92,7 @@ h1{
     
     #divIntro{
         margin: 0 auto;
-        margin-top: 10px;
+        margin-top: 5px;
         width: 700px;
         /*height: 80px;*/
         /*background-color:bisque ;*/
@@ -105,7 +103,7 @@ h1{
     #divBouttonsExemples{
         text-align: center;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 5px;
         width: 700px;
         /*background-color:bisque ;*/
     }
@@ -113,7 +111,7 @@ h1{
     #divQuestionClique{
         text-align: center;
         margin: 0 auto;
-        margin-top: 10px;
+        margin-top: 5px;
         width: 700px;
         height: 130px;
         /*background-color:bisque ;*/
