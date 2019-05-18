@@ -24,14 +24,14 @@ h1{
     width: 700px;
     height: 300px;
     border-radius: 3px ;
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
 }
 
 
 .bouttonsExemples {
     background-color: white;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: none;
+    border-bottom: 3px double black;
     padding: 5px 32px;
     text-align: center;
     text-decoration: none;
@@ -108,6 +108,15 @@ h1{
         /*background-color:bisque ;*/
     }
     
+    #divGrapheQuestion{
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 700px;
+        border: 1px solid #000000;
+        border-radius: 3px ;
+    }
+    
     #divQuestionClique{
         text-align: center;
         margin: 0 auto;
@@ -116,7 +125,7 @@ h1{
         height: 130px;
         /*background-color:bisque ;*/
         border-radius: 3px ;
-        border: 1px solid #000000;
+        /*border: 1px solid #000000;*/
     }
 }
 
