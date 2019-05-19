@@ -46,7 +46,7 @@ html, body{
 
 .menu{
 	height: 500px;
-	background-color:bisque;
+	background-color: #CECECE;
 	width: 200px;
     border: 1px outset #2c3e50;
 }
@@ -70,15 +70,16 @@ html, body{
 .nav{
     position: absolute;
     visibility: hidden;
-	margin-left: -200px;
+	margin-top: -500px;
 	transition-duration: 0.2s;
 
 }
 
 .nav_open{
+    z-index: 1;
     visibility: visible;
-	margin-left: 0;
-	transition-duration: 0.2s;
+	margin-top: 0;
+	transition-duration: 0.3s;
     
 }
 
