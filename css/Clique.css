@@ -18,16 +18,6 @@ h1{
 }
 
 
-#divGraphe {
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 700px;
-    height: 300px;
-    border-radius: 3px ;
-    /*border: 1px solid #000000;*/
-}
-
-
 .bouttonsExemples {
     background-color: white;
     border: none;
@@ -100,14 +90,9 @@ h1{
         border: 1px solid #000000;
     }
     
-    #divBouttonsExemples{
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 5px;
-        width: 700px;
-        /*background-color:bisque ;*/
-    }
     
+    /*  -----------------------------  */
+    /*  ------ Bloc d'exemples ------  */
     #divGrapheQuestion{
         text-align: center;
         margin: 0 auto;
@@ -116,6 +101,30 @@ h1{
         border: 1px solid #000000;
         border-radius: 3px ;
     }
+    
+    #divBouttonsExemples{
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 700px;
+        /*background-color:bisque ;*/
+    }
+    
+    #divBouttonsExemples div{
+        display: inline-block;
+    }
+    
+    
+    #divGraphe {
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 700px;
+        height: 300px;
+        border-radius: 3px ;
+        /*border: 1px solid #000000;*/
+    }
+
+    
     
     #divQuestionClique{
         text-align: center;
@@ -129,22 +138,46 @@ h1{
     }
 }
 
+
+
 @media all and (max-width: 800px)
 {
     #blocPrincipal{
         width: auto; 
         margin:0 auto;
-        border: 1px solid lightgray;
+        padding: 0px 10px;
+    }
+    
+    header{
         padding: 10px;
+        border-bottom: 3px double #2c3e50;
     }
     
     #divIntro{
         float:none;
         clear:both;
+        /*margin: 0 auto;*/
+        margin-top: 5px;
         width:100%;
-        background-color: #ccc;
         border-radius: 3px;
-
+        border: 1px solid #000000;
     }
+    
+    /*  -----------------------------  */
+    /*  ------ Bloc d'exemples ------  */
+    #divGrapheQuestion{
+        float:none;
+        clear:both;
+        text-align: center;
+        margin-top: 5px;
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 3px ;
+    }
+    
+    #divBouttonsExemples div{
+        display: inline-block;
+    }
+    
 }
 
