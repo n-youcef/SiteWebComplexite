@@ -49,9 +49,13 @@ var edgesG2 = new vis.DataSet([
 // Une documentation est disponible sur le Web
 // http://visjs.org/docs/network/
 var options = {
+    
+    clickToUse: true,
+    
     interaction:{
         dragNodes:false, //Pour eviter que les noeuds bougent
         dragView: false, //Pour eviter que le graphe bouge
+        zoomView: false,
     },
     
     nodes:{
@@ -65,4 +69,6 @@ var options = {
             roundness: 1
         }
     }
+    
+    
 };

@@ -181,3 +181,17 @@ h1{
     
 }
 
+
+@media all and (max-device-width: 480px)
+{
+    h1{
+        margin: 0px;
+        padding: 0px;
+        font-size: 1.5em;
+        font-variant: small-caps;
+    }
+    
+    #divGraphe {
+        height: 300px;
+    }
+}
