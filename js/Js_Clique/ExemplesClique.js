@@ -22,29 +22,29 @@ function afficherExempleClique(numExemple){
         case 1:
             network = new vis.Network(container, data1Clique, options);  
             questionClique.innerHTML = "G contient-il une clique de taille 3?";
-            buttonOui.addEventListener("click", function() { afficherReponse(1, "OUI");}, false);
-            buttonNon.addEventListener("click", function() { afficherReponse(1, "NON");}, false);
+            buttonOui.addEventListener("click", function() { afficherReponseClique(1, "OUI");}, false);
+            buttonNon.addEventListener("click", function() { afficherReponseClique(1, "NON");}, false);
             reponseClique.innerHTML = "";
             break;
         case 2:
             network = new vis.Network(container, data1Clique, options);  
             questionClique.innerHTML = "G contient-il une clique de taille 4?";
-            buttonOui.addEventListener("click", function() { afficherReponse(2, "OUI");}, false);
-            buttonNon.addEventListener("click", function() { afficherReponse(2, "NON");}, false);
+            buttonOui.addEventListener("click", function() { afficherReponseClique(2, "OUI");}, false);
+            buttonNon.addEventListener("click", function() { afficherReponseClique(2, "NON");}, false);
             reponseClique.innerHTML = "";
             break;
         case 3:
             network = new vis.Network(container, data2Clique, options);
             questionClique.innerHTML = "G contient-il une clique de taille 5?";
-            buttonOui.addEventListener("click", function() { afficherReponse(3, "OUI");}, false);
-            buttonNon.addEventListener("click", function() { afficherReponse(3, "NON");}, false);
+            buttonOui.addEventListener("click", function() { afficherReponseClique(3, "OUI");}, false);
+            buttonNon.addEventListener("click", function() { afficherReponseClique(3, "NON");}, false);
             reponseClique.innerHTML = "";
             break;
         case 4:
             network = new vis.Network(container, data2Clique, options);
             questionClique.innerHTML = "G contient-il une clique de taille 4?";
-            buttonOui.addEventListener("click", function() { afficherReponse(4, "OUI");}, false);
-            buttonNon.addEventListener("click", function() { afficherReponse(4, "NON");}, false);
+            buttonOui.addEventListener("click", function() { afficherReponseClique(4, "OUI");}, false);
+            buttonNon.addEventListener("click", function() { afficherReponseClique(4, "NON");}, false);
             reponseClique.innerHTML = "";
             break;
 
