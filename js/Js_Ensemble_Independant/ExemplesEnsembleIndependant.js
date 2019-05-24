@@ -58,6 +58,7 @@ function afficherExempleEnsembleIndependant(numExemple){
 
 
 
+
 function afficherReponseEnsembleIndependant(numReponse, reponsePropose){
     switch (numReponse){
         case 1:
@@ -96,3 +97,4 @@ function afficherGraphe1EnsembleIndependant() {
 }
 
 afficherGraphe1EnsembleIndependant()
+
