@@ -67,27 +67,27 @@ function afficherReponseClique(numReponse, reponsePropose){
     switch (numReponse){
         case 1:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Reponse Juste: on voit bien les sommets 2,4 et 5 qui forment un triangle dans le graphe";
+                reponseClique.innerHTML = "Bonne Réponse: on voit bien les sommets 2,4 et 5 qui forment un triangle dans le graphe";
             else
-                reponseClique.innerHTML = "Reponse Faux";
+                reponseClique.innerHTML = "Mauvaise Réponse ";
             break;
         case 2:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Repone Faux car il n,existe pas de sous graphe complet de taille 4 dans ce graphe";
+                reponseClique.innerHTML = "Mauvaise Réponse car il n,existe pas de sous graphe complet de taille 4 dans ce graphe";
             else
-                reponseClique.innerHTML = "Repone  Vrai";
+                reponseClique.innerHTML = "Bonne Réponse";
             break;
         case 3:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Reponse faux justification on a un graphe de 5 sommet non complet impossible d'avoir un clique de taille 5";
+                reponseClique.innerHTML = "Mauvaise Réponse : on a un graphe de 5 sommet non complet impossible d'avoir un clique de taille 5";
             else
-                reponseClique.innerHTML = "Reponse Vrai";
+                reponseClique.innerHTML = "Bonne Réponse";
             break;
         case 4:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Reponse Juste: on voit bien les sommets 1,2,3 et 4 qui forment un sous graphe complet dans le graphe";
+                reponseClique.innerHTML = "Bonne Réponse: on voit bien les sommets 1,2,3 et 4 qui forment un sous graphe complet dans le graphe";
             else
-                reponseClique.innerHTML = "Reponse Faux";
+                reponseClique.innerHTML = "Mauvaise Réponse";
             break;
 
     }

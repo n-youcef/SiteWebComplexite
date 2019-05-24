@@ -21,14 +21,14 @@ function afficherExempleEnsembleIndependant(numExemple){
     switch (numExemple){
         case 1:
             network = new vis.Network(container, data1EnsembleIndependant, options);  
-            questionEnsembleIndependant.innerHTML = "G contient-il une clique de taille 3?";
+            questionEnsembleIndependant.innerHTML = "G contient-il un ensemble independant de taille 3?";
             buttonOui.addEventListener("click", function() { afficherReponseEnsembleIndependant(1, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseEnsembleIndependant(1, "NON");}, false);
             reponseEnsembleIndependant.innerHTML = "";
             break;
         case 2:
             network = new vis.Network(container, data1EnsembleIndependant, options);  
-            questionEnsembleIndependant.innerHTML = "G contient-il une clique de taille 4?";
+            questionEnsembleIndependant.innerHTML = "G contient-il un ensemble independant de taille 4?";
             buttonOui.addEventListener("click", function() { afficherReponseEnsembleIndependant(2, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseEnsembleIndependant(2, "NON");}, false);
             reponseEnsembleIndependant.innerHTML = "";
@@ -42,7 +42,7 @@ function afficherExempleEnsembleIndependant(numExemple){
             break;
         case 4:
             network = new vis.Network(container, data2EnsembleIndependant, options);
-            questionEnsembleIndependant.innerHTML = "G contient-il une clique de taille 4?";
+            questionEnsembleIndependant.innerHTML = "G contient-il un ensemble independant de taille 4?";
             buttonOui.addEventListener("click", function() { afficherReponseEnsembleIndependant(4, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseEnsembleIndependant(4, "NON");}, false);
             reponseEnsembleIndependant.innerHTML = "";
@@ -63,9 +63,9 @@ function afficherReponseEnsembleIndependant(numReponse, reponsePropose){
     switch (numReponse){
         case 1:
             if(reponsePropose == "OUI")
-                reponseEnsembleIndependant.innerHTML = "Juste: on voit bien les sommets 2,4 et 5 qui forment un triangle dans le graphe";
+                reponseEnsembleIndependant.innerHTML = "Mauvaise Réponse : les ensemble independants {1, 3}, {1, 5}, {2, 5}, {4}. et la taille maximal est de 2";
             else
-                reponseEnsembleIndependant.innerHTML = "Faux: provisoire: C'est VRAI";
+                reponseEnsembleIndependant.innerHTML = "Bonne Réponse";
             break;
         case 2:
             if(reponsePropose == "OUI")
@@ -81,9 +81,9 @@ function afficherReponseEnsembleIndependant(numReponse, reponsePropose){
             break;
         case 4:
             if(reponsePropose == "OUI")
-                reponseEnsembleIndependant.innerHTML = "provisoire: C'est VRAII";
+                reponseEnsembleIndependant.innerHTML = "Bonne Réponse:  {1,5,6,8}";
             else
-                reponseEnsembleIndependant.innerHTML = "provisoire: C'est VRAI";
+                reponseEnsembleIndependant.innerHTML = "Mauvaise Réponse";
             break;
 
     }
