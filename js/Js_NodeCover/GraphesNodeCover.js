@@ -1,5 +1,5 @@
 // Tableau contenant les noeuds
-var nodesG1Clique = new vis.DataSet([
+var nodesG1NodeCover = new vis.DataSet([
     {id: 1, label: '1'},
     {id: 2, label: '2'},
     {id: 3, label: '3'},
@@ -8,7 +8,7 @@ var nodesG1Clique = new vis.DataSet([
 ]);
 
 // Tableau contenant les aretes
-var edgesG1Clique = new vis.DataSet([
+var edgesG1NodeCover = new vis.DataSet([
     {from: 1, to: 2},
     {from: 1, to: 3},
     {from: 3, to: 4},
@@ -21,7 +21,7 @@ var edgesG1Clique = new vis.DataSet([
 
 
 // Tableau contenant les noeuds
-var nodesG2Clique = new vis.DataSet([
+var nodesG2NodeCover = new vis.DataSet([
     {id: 1, label: '1'},
     {id: 2, label: '2'},
     {id: 3, label: '3'},
@@ -30,7 +30,7 @@ var nodesG2Clique = new vis.DataSet([
 ]);
 
 // Tableau contenant les aretes
-var edgesG2Clique = new vis.DataSet([
+var edgesG2NodeCover = new vis.DataSet([
     {from: 1, to: 2},
     {from: 1, to: 3},
     {from: 1, to: 4},
