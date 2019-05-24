@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <title>Ensemble Indépendant</title>
         
+        <meta name="viewport" content="width=device-width" />
+        
         <!-- Fichier CSS: MENU --> 
         <link href="../css/Menu.css" rel="stylesheet" type="text/css" />
         
@@ -12,6 +14,17 @@
         <!-- Fichier CSS: Feuille de style générale de tout le site web (responsive) -->
         <link href="../css/Clique.css" rel="stylesheet" type="text/css" /> <!-- MODIFIER LE NOM DU FICHIER!!!!!!!!!!! -->
         
+        <!-- CSS et SCRIPT: pour la création de graphes -->
+        <!-- Ces deux fichiers sont importés de la librairie vis (nom dossier: node_modules) -->
+        <script type="text/javascript" src="../node_modules/vis/dist/vis.js"></script>
+        <link href="../node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+
+
+
+        <!-- CSS et SCRIPT: pour les popups qui affichent les définitions -->
+        <link rel="stylesheet" type="text/css" href="../css/DefinitionBulle.css" />
+        <script src="../js/DefinitionBulle.js" type="text/javascript"></script>
+
         <!-- SCRIPT: pour afficher les formules mathématique avec LaTeX -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     </head>
@@ -62,7 +75,7 @@
                     <div id="divGraphe"></div>
 
                     <div id="divQuestionClique">
-                        <p id="questionClique">G contient-il une clique de taille 3?</p>
+                        <p id="questionEnsembleIndependant">G contient-il une clique de taille 3?</p>
                         <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
                         <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
                         <p id="reponseEnsembleIndependant"></p>
@@ -79,6 +92,8 @@
         </div> <!-- blocPrincipal -->
        
         <script type="text/javascript" src="../js/Menu.js"></script>
+        <script src="../js/Js_Ensemble_Independant/GraphesEnsembleIndependant.js" type="text/javascript"></script>
+        <script src="../js/Js_Ensemble_Independant/ExemplesEnsembleIndependant.js" type="text/javascript"></script>
 
     </body>
 </html>
