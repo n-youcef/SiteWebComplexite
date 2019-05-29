@@ -10,8 +10,25 @@ var tabDefinition = {
 
 function move(e) {
     if (isBulleVisible) { // Si la bulle est visible, on calcul en temps reel sa position ideale
-        GetId("divDefinition").style.left = event.pageX - 50 + "px";
-        GetId("divDefinition").style.top = event.pageY - 60 + "px";
+        var longueurBlocPrincipal =document.getElementById("blocPrincipal").offsetWidth;
+        var largBody = (document.body.clientWidth);
+        
+        var borneGauche = ((largBody - longueurBlocPrincipal)/2) + 10;
+        var borneDroite = ((largBody - longueurBlocPrincipal)/2) + 800;
+        
+        var longueur = 10;
+         
+        if(largBody > 800){
+            if((event.pageX - 243) > borneGauche)
+                longueur = event.pageX - 243;
+            else
+            longueur = borneGauche;
+        }
+        
+            
+        
+        GetId("divDefinition").style.left = longueur + "px";
+        GetId("divDefinition").style.top = event.pageY - 70 + "px";
     }
 }
 

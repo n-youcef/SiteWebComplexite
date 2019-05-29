@@ -40,6 +40,7 @@ initLienMenu();
 //Creation d'un div qui contiendra toutes les balises <a> du menu
 
 var divMenu = document.createElement("div");
+divMenu.id = "divMenu";
 divMenu.classList.add("menu");
 divMenu.classList.add("nav");
 //Ajout de class "menu" et "nav" à ce div
@@ -54,7 +55,57 @@ navMenu.append(divMenu);
 //--------------------------------------------
 var btn = document.querySelector('.toggle_btn');
 var nav = document.querySelector('.nav');
+var is_optionActif = true;
+var is_menuOuvert = false;
 
-btn.onclick = function(){
+btn.onclick = function ouvrirFermerMenu(){
 	nav.classList.toggle('nav_open');
+    if(is_menuOuvert)
+        is_menuOuvert = false;
+    else
+        is_menuOuvert = true;
+    
+    if(is_optionActif){
+        network.setOptions(optionNonActif);
+        is_optionActif = false;
+    }
+    else{
+        network.setOptions(optionActif);
+        is_optionActif = true;
+    }
 }
+
+var optionActif = {
+    clickToUse: true,
+};
+var optionNonActif = {
+    clickToUse: false,
+};
+
+
+
+document.body.onclick = function(e) {
+
+    if(is_menuOuvert){
+        var div_cliquable = $('#divMenu');
+        var div_cliquable2 = $('#toggle_btn_id');
+
+
+        // Si ce n'est pas #ma_div ni un de ses enfants
+        if( !$(e.target).is(div_cliquable) && !$.contains(div_cliquable[0],e.target) ) {
+            if( !$(e.target).is(div_cliquable2) && !$.contains(div_cliquable2[0],e.target) ) {
+                nav.classList.toggle('nav_open');
+                is_menuOuvert = false;
+                
+                network.setOptions(optionActif);
+                is_optionActif = true;
+                
+                
+            }
+
+        }
+    }
+    
+
+}
+

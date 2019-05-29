@@ -5,7 +5,6 @@ var nodesG1Clique = new vis.DataSet([
     {id: 3, label: '3'},
     {id: 4, label: '4'},
     {id: 5, label: '5'},
-    
 ]);
 
 // Tableau contenant les aretes
@@ -16,9 +15,6 @@ var edgesG1Clique = new vis.DataSet([
     {from: 2, to: 4},
     {from: 2, to: 5},
     {from: 4, to: 5},
-    {from: 5, to: 4},
-    
-    
 ]);
 
 

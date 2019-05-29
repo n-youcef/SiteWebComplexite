@@ -16,8 +16,10 @@ var data2Clique = {
     edges: edgesG2Clique,
 };
 
+var network;
+
 function afficherExempleClique(numExemple){
-    var network;
+    
     switch (numExemple){
         case 1:
             network = new vis.Network(container, data1Clique, options);  
@@ -53,7 +55,7 @@ function afficherExempleClique(numExemple){
 
 
 function afficherGraphe1Clique() {
-    var network = new vis.Network(container, data1Clique, options);
+    network = new vis.Network(container, data1Clique, options);
     buttonOui.addEventListener("click", function() { afficherReponseClique(1, "OUI");}, false);
     buttonNon.addEventListener("click", function() { afficherReponseClique(1, "NON");}, false);
 }

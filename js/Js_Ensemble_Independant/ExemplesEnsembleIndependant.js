@@ -16,8 +16,9 @@ var data2EnsembleIndependant = {
     edges: edgesG2EnsembleIndependant,
 };
 
+var network;
+
 function afficherExempleEnsembleIndependant(numExemple){
-    var network;
     switch (numExemple){
         case 1:
             network = new vis.Network(container, data1EnsembleIndependant, options);  
@@ -91,7 +92,7 @@ function afficherReponseEnsembleIndependant(numReponse, reponsePropose){
 
 
 function afficherGraphe1EnsembleIndependant() {
-    var network = new vis.Network(container, data1EnsembleIndependant, options);
+    network = new vis.Network(container, data1EnsembleIndependant, options);
     buttonOui.addEventListener("click", function() { afficherReponseEnsembleIndependant(1, "OUI");}, false);
     buttonNon.addEventListener("click", function() { afficherReponseEnsembleIndependant(1, "NON");}, false);
 }

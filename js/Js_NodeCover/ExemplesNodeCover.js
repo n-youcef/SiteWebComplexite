@@ -16,8 +16,10 @@ var data2NodeCover = {
     edges: edgesG2NodeCover,
 };
 
+var network;
+
 function afficherExempleNodeCover(numExemple){
-    var network;
+    
     switch (numExemple){
         case 1:
             network = new vis.Network(container, data1NodeCover, options);  
@@ -52,8 +54,10 @@ function afficherExempleNodeCover(numExemple){
 }
 
 
+
+
 function afficherGraphe1NodeCover() {
-    var network = new vis.Network(container, data1NodeCover, options);
+    network = new vis.Network(container, data1NodeCover, options);
     buttonOui.addEventListener("click", function() { afficherReponseNodeCover(1, "OUI");}, false);
     buttonNon.addEventListener("click", function() { afficherReponseNodeCover(1, "NON");}, false);
 }
@@ -94,3 +98,5 @@ function afficherReponseNodeCover(numReponse, reponsePropose){
 }
 
 afficherGraphe1NodeCover()
+
+
