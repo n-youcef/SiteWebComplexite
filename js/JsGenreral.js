@@ -1,11 +1,9 @@
-
 function obj_buttonExemple(){
     this.numBoutton;
     this.elementButton;
 } //Objet
 
-var tab_bouttonExemple = [
-];
+var tab_bouttonExemple = [];
 
 
 
@@ -17,7 +15,6 @@ function init_buttonsExemples(){
         tab_bouttonExemple[i].numBoutton = i+1; 
         tmp_num = tab_bouttonExemple[i].numBoutton;
         tab_bouttonExemple[i].elementButton = document.getElementById("btn" + tmp_num);
-        
     }
     tab_bouttonExemple[0].elementButton.addEventListener("click", function() { activerBoutton(1);}, false);
     tab_bouttonExemple[1].elementButton.addEventListener("click", function() { activerBoutton(2);}, false);
