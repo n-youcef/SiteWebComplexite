@@ -8,6 +8,24 @@ function init_ExemplesSAT3(){
     }
 }init_ExemplesSAT3();
 
-for(var i=0; i<4; i++){
-    console.log(tab_ExemplesSAT3[i]);
+function init_affichageExempleSAT3(){
+    for(var i=0; i<4; i++){
+        tab_ExemplesSAT3[i].style.visibility = "hidden";
+        tab_ExemplesSAT3[i].style.height = "0px";
+    }
+    
+    tab_ExemplesSAT3[0].style.visibility = "visible";
+    tab_ExemplesSAT3[0].style.height = "auto";
+}init_affichageExempleSAT3();
+
+
+
+function afficherExempleSAT3(numExemple){
+    for(var i=0; i<4; i++){
+        tab_ExemplesSAT3[i].style.visibility = "hidden";
+        tab_ExemplesSAT3[i].style.height = "0px";
+    }
+    
+    tab_ExemplesSAT3[numExemple-1].style.visibility = "visible";
+    tab_ExemplesSAT3[numExemple-1].style.height = "auto"; 
 }
