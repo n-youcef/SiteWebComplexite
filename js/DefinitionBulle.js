@@ -9,26 +9,35 @@ var tabDefinition = {
 };
 
 function move(e) {
-    if (isBulleVisible) { // Si la bulle est visible, on calcul en temps reel sa position ideale
+
+    if (isBulleVisible) { 
         var longueurBlocPrincipal =document.getElementById("blocPrincipal").offsetWidth;
-        var largBody = (document.body.clientWidth);
         
-        var borneGauche = ((largBody - longueurBlocPrincipal)/2) + 10;
-        var borneDroite = ((largBody - longueurBlocPrincipal)/2) + 800;
+        if(longueurBlocPrincipal >= 800){
+            var widthBody = (document.body.clientWidth);
         
-        var longueur = 10;
+            var espaceBlanc = ((widthBody - longueurBlocPrincipal)/2);
+        
+            var borneGauche = espaceBlanc + 49;
+            var borneDroite = espaceBlanc + 750;
+        
+            var longueur = event.pageX - 250;;
          
-        if(largBody > 800){
-            if((event.pageX - 243) > borneGauche)
-                longueur = event.pageX - 243;
-            else
-            longueur = borneGauche;
-        }
-        
+            if(!((event.pageX - 250) > borneGauche))
+                longueur = borneGauche;
             
-        
-        GetId("divDefinition").style.left = longueur + "px";
-        GetId("divDefinition").style.top = event.pageY - 70 + "px";
+            if(!((event.pageX + 250) < borneDroite))
+                longueur = borneDroite -500;
+            
+            GetId("divDefinition").style.left = longueur + "px";
+            GetId("divDefinition").style.top = event.pageY - 70 + "px";
+        }
+     
+        else{
+            // Si la bulle est visible, on calcul en temps reel sa position ideale
+            GetId("divDefinition").style.left = event.pageX + "px";
+            GetId("divDefinition").style.top = event.pageY - 70 + "px";   
+        }
     }
 }
 
@@ -48,3 +57,27 @@ function cacher() {
 }
 
 document.onmousemove = move; // dès que la souris bouge, on appelle la fonction move pour mettre à jour la position de la bulle.
+
+
+
+var tab_motADefinir = document.getElementsByClassName("motADefinir");
+
+
+//creer un tableau qui contiendra les mots a definir
+var tab_mot;
+
+for(var i=0; i< tab_motADefinir.length; i++){
+    
+}
+
+
+for(var i=0; i< tab_motADefinir.length; i++){
+    //utiliserr ce nouveau tableau pour utiliser comme parametre fonction definir(...) 
+    tab_motADefinir[i].addEventListener("mouseover", function() { definir(tab_motADefinir[i].innerHTML);}, false);
+    tab_motADefinir[i].addEventListener("mouseout", function() { cacher();}, false);
+    //tab_motADefinir[i].onmouseover = test3;
+}
+
+function test3(num){
+    console.log("heyyyyyy " + num);
+}
