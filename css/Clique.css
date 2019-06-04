@@ -12,6 +12,11 @@ h1{
     padding: 0px;
 }
 
+#paragrapheDefinition{
+    margin: 5px 10px;
+    padding: 0px;
+}
+
 #divQuestionClique p{
     margin: 10px;
     padding: 0px;
@@ -94,17 +99,18 @@ h1{
     
     .infobulle{
         width: 500px;
+        height: 0px;
         position: absolute;   
         visibility : hidden;
         border: 2px solid Black;
-        padding: 10px;
+        padding: 5px;
         font-family: Verdana, Arial;
         font-size: 10px;
         background-color: white;
         border-radius: 3px ;
         z-index: 10;
     }
-    
+
     #divIntro{
         margin: 0 auto;
         margin-top: 5px;
@@ -174,16 +180,18 @@ h1{
     }
     
     .infobulle{
-        width: 500px;
-        position: absolute;   
+        float:none;
+        clear:both;
+        /*margin: 0 auto;*/
+        margin-top: 5px;
+        width:100%;
+        border-radius: 3px;
+        border: 1px solid #000000;
         visibility : hidden;
-        border: 1px solid Black;
-        padding: 10px;
-        font-family: Verdana, Arial;
-        font-size: 10px;
-        background-color: #FFFFCC;
-        z-index: 10;
+        height: 0px;
     }
+    
+    
     
     header{
         padding: 10px;
@@ -210,6 +218,7 @@ h1{
         clear:both;
         text-align: center;
         margin-top: 5px;
+        margin-bottom: 30px;
         width: 100%;
         border: 1px solid #000000;
         border-radius: 3px ;

@@ -8,6 +8,9 @@ var tabDefinition = {
     Graphe: "Ensemble de sommets (ou points) et d'arcs (ou lignes orientées) ou d'arêtes (ou lignes non orientées) liant certains couples de points.",
 };
 
+
+
+
 function move(e) {
 
     if (isBulleVisible) { 
@@ -41,43 +44,44 @@ function move(e) {
     }
 }
 
-function definir(text) {
-    if (isBulleVisible == false) {
+function definir(event) {
+    //if (isBulleVisible == false) {
+        
+        /*  On commence par récupérer le mot se trouvant dans la balise SPAN 
+         *  qui a été mousOver.
+         *  Puis on transforme la premiere lettre de ce mot en majuscule et le reste en minuscule.
+         */
+        var mot = event.target.innerHTML;
+        mot = mot.charAt(0).toUpperCase() + mot.substring(1).toLowerCase()
+        
+        
         GetId("divDefinition").style.visibility = "visible";
-        GetId("divDefinition").innerHTML = tabDefinition[text]; // on copie notre texte dans l'élément html
+        GetId("divDefinition").style.height = "auto";
+        GetId("paragrapheDefinition").innerHTML = tabDefinition[mot]; // on copie notre texte dans l'élément html
         isBulleVisible = true;
-    }
+    /*}*/
 }
 
 function cacher() {
     if (isBulleVisible == true) {
         GetId("divDefinition").style.visibility = "hidden"; // Si la bulle est visible on la cache
+        GetId("divDefinition").style.height = "0px";
         isBulleVisible = false;
     }
 }
 
+
+
+//  --------------------------------------------------------------
+//  ------------------  DECLARATION DES EVENTS  ------------------  
 document.onmousemove = move; // dès que la souris bouge, on appelle la fonction move pour mettre à jour la position de la bulle.
 
-
-
 var tab_motADefinir = document.getElementsByClassName("motADefinir");
-
-
-//creer un tableau qui contiendra les mots a definir
-var tab_mot;
-
 for(var i=0; i< tab_motADefinir.length; i++){
+    tab_motADefinir[i].onmouseover = definir;
+    tab_motADefinir[i].onmouseout = cacher;
     
+    tab_motADefinir[i].onclick = definir;
+    //tab_motADefinir[i].onmouseout = cacher;
 }
 
-
-for(var i=0; i< tab_motADefinir.length; i++){
-    //utiliserr ce nouveau tableau pour utiliser comme parametre fonction definir(...) 
-    tab_motADefinir[i].addEventListener("mouseover", function() { definir(tab_motADefinir[i].innerHTML);}, false);
-    tab_motADefinir[i].addEventListener("mouseout", function() { cacher();}, false);
-    //tab_motADefinir[i].onmouseover = test3;
-}
-
-function test3(num){
-    console.log("heyyyyyy " + num);
-}
