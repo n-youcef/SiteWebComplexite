@@ -37,42 +37,66 @@
             
             
             <section>
-
-                <div id="divDefinition" class="infobulle"></div>
-
-
+                
                 <div id="divIntro">
                     <p id="paragrapheIntro"><span class="gras">Set Packing</span><br>
                     <span class="italique">entrée:</span> une famille {Sj}j∈{1,...,m} d’ensembles tels que Sj ⊆ {1, . . . , n} pour tout j ∈ {1, . . . , m}, et un entier \(k\) ∈ N <br>
                     <span class="italique">question:</span> \({Sj}\) contient-il \(k\) ensembles mutuellement disjoints ?</p>
                 </div>
-
-
-                <div id="divBouttonsExemples">
-                    <button id="btn1" class="bouttonsExemples" onclick="afficherExemple(1);">Exemple 1</button>
-                    <button id="btn2" class="bouttonsExemples" onclick="afficherExemple(2);">Exemple 2</button>
-                    <button id="btn3" class="bouttonsExemples" onclick="afficherExemple(3);">Exemple 3</button>
-                    <button id="btn4" class="bouttonsExemples" onclick="afficherExemple(4);">Exemple 4</button>
+                
+                <div id="divDefinition" class="infobulle">
+                    <p id="paragrapheDefinition"></p>
                 </div>
-
+                
+                
                 <!-- DIV contenant le(s) graphe(s) -->
-                <div id="divGraphe"></div>
+                
+                <div id="divGrapheQuestion">
+                    
+                    <div id="divBouttonsExemples">
+                        <!-- onclick="afficherExempleClique(1); -->
+                        <div id="divBouttonsExemplesBloc1">
+                            <button id="btn1" class="bouttonsExemples" onclick="afficherExempleSAT3(1);">Exemple 1</button>
+                            <button id="btn2" class="bouttonsExemples" onclick="afficherExempleSAT3(2);">Exemple 2</button>
+                        </div>
+                        <div id="divBouttonsExemplesBloc2">
+                            <button id="btn3" class="bouttonsExemples" onclick="afficherExempleSAT3(3);">Exemple 3</button>
+                            <button id="btn4" class="bouttonsExemples" onclick="afficherExempleSAT3(4);">Exemple 4</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="divGraphe">
+                        <div id="divExemple1">
+                            <img src="ExempleSetPacking/exemple1SetPacking.png">
+                        </div>
+                        <div id="divExemple2">
+                            <img src="ExempleSetPacking/exemple2SetPacking.png">
+                        </div>
+                        <div id="divExemple3">
+                            <img src="ExempleSetPacking/exemple1SetPacking.png">
+                        </div>
+                        <div id="divExemple4">
+                            <img src="ExempleSetPacking/exemple4SetPacking.png">
+                        </div>
+                    </div>
+                
 
-                <div id="divQuestionClique">
-                    <p id="questionClique">Sj contient-il k ensembles mutuellement disjoints ?</p>
-                    <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
-                    <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
-                    <p id="reponseClique"></p>
+                    <div id="divQuestionClique">
+                        <p id="questionClique">Sj contient-il 2 ensembles mutuellement disjoints?</p>
+                        <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
+                        <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
+                        <p id="reponseClique"></p>
+                    </div>
                 </div>
             </section>
-
-            <footer>
-                <!-- A VOIR PAR LA SUITE !!!!!!!!!  -->
-            </footer>
             
         </div> <!-- blocPrincipal -->
         
+        <script src="../js/DefinitionBulle.js" type="text/javascript"></script>
         <script type="text/javascript" src="../js/Menu.js"></script>
+        <script src="../js/JsGenreral.js" type="text/javascript"></script>
+        <script src="../js/Js_SetPacking/ExemplesSetPacking.js" type="text/javascript"></script>
         
     </body>
 </html>

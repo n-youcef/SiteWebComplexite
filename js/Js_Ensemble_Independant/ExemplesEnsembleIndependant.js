@@ -4,6 +4,8 @@ var buttonOui = document.getElementById('buttonOui');
 var buttonNon = document.getElementById('buttonNon');
 var reponseClique = document.getElementById('reponseClique');
 
+container.style.height = "300px";
+
 // provide the data in the vis format
 var data1EnsembleIndependant = {
     nodes: nodesG1EnsembleIndependant,

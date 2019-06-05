@@ -5,9 +5,6 @@ function obj_buttonExemple(){
 
 var tab_bouttonExemple = [];
 
-
-
-
 function init_buttonsExemples(){
     var tmp_num;
     for(var i=0; i<4; i++){
@@ -23,8 +20,6 @@ function init_buttonsExemples(){
 }init_buttonsExemples();
 
 
-
-
 function activerBoutton(numBoutton){
     for(var i=0; i<4; i++)
         tab_bouttonExemple[i].elementButton.classList.remove("bouttonActiver");
@@ -32,9 +27,30 @@ function activerBoutton(numBoutton){
     
 }
 
-
 window.onload = function() { tab_bouttonExemple[0].elementButton.classList.toggle('bouttonActiver');}
 
 
 //---------------------------------------------------------------
 
+
+var buttonOuiReponse = document.getElementById("buttonOui");
+var buttonNonReponse = document.getElementById("buttonNon");
+
+buttonOuiReponse.addEventListener("click", function() { activerBouttonReponse("OUI");}, false);
+buttonNonReponse.addEventListener("click", function() { activerBouttonReponse("NON");}, false);
+
+function activerBouttonReponse(bool_reponse){
+    if(bool_reponse == "OUI"){
+        buttonOuiReponse.classList.add("bouttonActiver");
+        buttonNonReponse.classList.remove("bouttonActiver");
+    }
+    else{
+        buttonNonReponse.classList.add("bouttonActiver");
+        buttonOuiReponse.classList.remove("bouttonActiver");
+    }
+}
+
+function desactiverBouttonReponse(){
+    buttonOuiReponse.classList.remove("bouttonActiver");
+    buttonNonReponse.classList.remove("bouttonActiver");
+}

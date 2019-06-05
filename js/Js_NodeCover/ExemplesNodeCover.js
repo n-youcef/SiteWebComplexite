@@ -4,6 +4,8 @@ var buttonOui = document.getElementById('buttonOui');
 var buttonNon = document.getElementById('buttonNon');
 var reponseNodeCover = document.getElementById('reponseNodeCover');
 
+container.style.height = "300px";
+
 // provide the data in the vis format
 var data1NodeCover = {
     nodes: nodesG1NodeCover,
