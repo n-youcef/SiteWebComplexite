@@ -4,11 +4,11 @@ function GetId(id) {
 var isBulleVisible = false; // La variable i nous dit si la bulle est visible ou non
 
 var tabDefinition = {
-    Clique: "Une clique d'un graphe non orienté est, en théorie des graphes, un sous-ensemble des sommets de ce graphe dont le sous-graphe induit est complet, c'est-à-dire que deux sommets quelconques de la clique sont toujours adjacents.",
-    Graphe: "Ensemble de sommets (ou points) et d'arcs (ou lignes orientées) ou d'arêtes (ou lignes non orientées) liant certains couples de points.",
+    Clique: "Une clique d'un graphe non orienté est un sous-ensemble de sommets dont le sous-graphe induit est complet, c'est-à-dire que deux sommets quelconques de la clique sont toujours adjacents.",
+    EnsembleIndependant: "Ensemble indépendant, appelé aussi un stable ou independent set en anglais, est un ensemble de sommets deux à deux non adjacents. ",
+    SAT3:"C'est une formules sous formes normales conjonctives des clauses avec exactement 3 littéraux",
+    NodeCover:"C'est un sous ensemble V' ⊆ V tel que |V'| ≤ k et toute arête de E a l’une de ses extrémités dans V'",
 };
-
-
 
 
 function move(e) {
@@ -54,6 +54,10 @@ function definir(event) {
         var mot = event.target.innerHTML;
         mot = mot.charAt(0).toUpperCase() + mot.substring(1).toLowerCase()
         
+        if(mot == "Ensemble indépendant")
+			mot = "EnsembleIndependant" 
+			
+		console.log("bdsg " + mot)
         
         GetId("divDefinition").style.visibility = "visible";
         GetId("divDefinition").style.height = "auto";
