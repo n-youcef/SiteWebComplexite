@@ -6,8 +6,9 @@ var isBulleVisible = false; // La variable i nous dit si la bulle est visible ou
 var tabDefinition = {
     Clique: "Une clique d'un graphe non orienté est un sous-ensemble de sommets dont le sous-graphe induit est complet, c'est-à-dire que deux sommets quelconques de la clique sont toujours adjacents.",
     EnsembleIndependant: "Ensemble indépendant, appelé aussi un stable ou independent set en anglais, est un ensemble de sommets deux à deux non adjacents. ",
-    SAT3:"C'est une formules sous formes normales conjonctives des clauses avec exactement 3 littéraux",
-    NodeCover:"C'est un sous ensemble V' ⊆ V tel que |V'| ≤ k et toute arête de E a l’une de ses extrémités dans V'",
+    SAT3:"C'est une formules sous formes normales conjonctives des clauses avec exactement 3 littéraux.",
+    NodeCover:"C'est un sous ensemble V' ⊆ V tel que |V'| ≤ k et toute arête de E a l’une de ses extrémités dans V'.",
+    Satisfaisable: "Une formule est satisfaisable s'il est possible de trouver une interprétation (modèle) qui rend la formule vraie.",
 };
 
 
@@ -56,8 +57,12 @@ function definir(event) {
         
         if(mot == "Ensemble indépendant")
 			mot = "EnsembleIndependant" 
-			
-		console.log("bdsg " + mot)
+    
+        if(mot == "Node cover")
+			mot = "NodeCover" 
+        
+
+
         
         GetId("divDefinition").style.visibility = "visible";
         GetId("divDefinition").style.height = "auto";

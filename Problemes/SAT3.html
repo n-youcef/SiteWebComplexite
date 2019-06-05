@@ -46,7 +46,7 @@
                 <div id="divIntro">
                     <p id="paragrapheIntro"><span class="gras">3-SAT</span><br>
                     <span class="italique">entrée:</span> une formule propositionnelle \(\phi\) dont les clauses sont de taille exactement 3 <br>
-                    <span class="italique">question:</span> est-ce que \(mod(\phi\))\(\neq\) ∅?</p>
+                        <span class="italique">question:</span> est-ce que \(mod(\phi\))\(\neq ∅\) (<span class="motADefinir">satisfaisable</span>)?</p>
                 </div>
                 
                 <div id="divDefinition" class="infobulle">
@@ -73,42 +73,22 @@
                     
                     <div id="divGraphe">
                         <div id="divExemple1">
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                            aaaaaaaaa \(G = (V, E)\) aaaaaaaaaa<br>
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+                            \(\phi\) = (\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(x_3\))\(\land\)(\(\lnot x_1\)\(\lor\)\(x_2\)\(\lor\)\(x_3\))\(\land\)(\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(\lnot x_3\))
                         </div>
                         <div id="divExemple2">
-                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
-                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
-                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
-                            bbbbbbbb \(G = (V, E)\) bbbbbbbbbbb<br>
-                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
-                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
+                            \(\phi\) = (\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(x_3\))\(\land\)\(\lnot ( x_1\)\(\lor\)\( x_2\)\(\lor\)\( x_3\))\(\land\)(\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(\lnot x_3\))
                         </div>
                         <div id="divExemple3">
-                            ccccccccccccccccccccccccccccccccccc<br>
-                            ccccccccccccccccccccccccccccccccccc<br>
-                            ccccccccccccccccccccccccccccccccccc<br>
-                            ccccccc \(G = (V, E)\) cccccccccccc<br>
-                            ccccccccccccccccccccccccccccccccccc<br>
-                            ccccccccccccccccccccccccccccccccccc<br>
+                            \(\phi\) = (\(x_1\)\(\lor\)\(\lnot x_1\)\(\lor\)\(x_3\))\(\land\)(\(\lnot x_2\)\(\lor\)\( x_2\)\(\lor\)\(\ x_3\))\(\land\)(\(x_1\)\(\lor\)\(x_3\)\(\lor\)\(\lnot x_3\))
                         </div>
                         <div id="divExemple4">
-                            ddddddddddddddddddddddddddddddddddd<br>
-                            ddddddddddddddddddddddddddddddddddd<br>
-                            ddddddddddddddddddddddddddddddddddd<br>
-                            dddddddddd \(G = (V, E)\) ddddddddd<br>
-                            ddddddddddddddddddddddddddddddddddd<br>
-                            ddddddddddddddddddddddddddddddddddd<br>
+                            \(\phi\) = (\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(x_3\))\(\land\)\(\lnot ( x_1\)\(\lor\)\( x_2\)\(\lor\)\( x_3\))\(\land\)(\(x_1\)\(\lor\)\(x_2\)\(\lor\)\(\lnot x_3\))\(\land\)(\(\lnot x_1\)\(\lor\)\(x_2\)\(\lor\)\(\lnot x_3\))
                         </div>
                     </div>
                 
 
                     <div id="divQuestionClique">
-                        <p id="questionClique">QUESTION PROVISOIRE!!!</p>
+                        <p id="questionClique">\(\phi\) est elle satisfaisable ?</p>
                         <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
                         <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
                         <p id="reponseClique"></p>

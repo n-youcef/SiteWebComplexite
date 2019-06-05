@@ -23,7 +23,7 @@
 
         <!-- CSS et SCRIPT: pour les popups qui affichent les définitions -->
         <link rel="stylesheet" type="text/css" href="../css/DefinitionBulle.css" />
-        <script src="../js/DefinitionBulle.js" type="text/javascript"></script>
+        
         
         <!-- SCRIPT: pour afficher les formules mathématique avec LaTeX -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
@@ -47,15 +47,15 @@
             
             <section>
 
-                <div id="divDefinition" class="infobulle"></div>
-
-
                 <div id="divIntro">
                     <p id="paragrapheIntro"><span class="gras">Node Cover</span><br>
                     <span class="italique">entrée:</span> Un graphe \(G = (V, E)\) et un entier \(k\)<br>
-                    <span class="italique">question:</span> existe-t-il une Node Cover de taille \(k\)?</p>
+                        <span class="italique">question:</span> existe-t-il une <span class="motADefinir">Node Cover</span> de taille \(k\)?</p>
                 </div>
 
+                <div id="divDefinition" class="infobulle">
+                    <p id="paragrapheDefinition"></p>
+                </div>
 
                 <!-- DIV contenant le(s) graphe(s) -->
             
@@ -74,8 +74,8 @@
 
                     <div id="divGraphe"></div>
 
-                    <div id="divQuestionNodeCover">
-                        <p id="questionNodeCover">G contient-il une clique de taille 3?</p>
+                    <div id="divQuestionClique">
+                        <p id="questionNodeCover">G contient-il une Node Cover de taille 3?</p>
                         <input id="buttonOui" class="bouttonsReponses" type="button" value="Oui">
                         <input id="buttonNon" class="bouttonsReponses" type="button" value="Non">
                         <p id="reponseNodeCover"></p>
@@ -90,8 +90,9 @@
         </div> <!-- blocPrincipal -->
             
         
-        
+        <script src="../js/DefinitionBulle.js" type="text/javascript"></script>
         <script type="text/javascript" src="../js/Menu.js"></script>
+        <script src="../js/JsGenreral.js" type="text/javascript"></script>
         <script src="../js/Js_NodeCover/GraphesNodeCover.js" type="text/javascript"></script>
         <script src="../js/Js_NodeCover/ExemplesNodeCover.js" type="text/javascript"></script>
     </body>

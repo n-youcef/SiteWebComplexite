@@ -25,30 +25,34 @@ function afficherExempleNodeCover(numExemple){
     switch (numExemple){
         case 1:
             network = new vis.Network(container, data1NodeCover, options);  
-            questionNodeCover.innerHTML = "G contient-il une clique de taille 3?";
+            questionNodeCover.innerHTML = "G contient-il une Node Cover de taille 3?";
             buttonOui.addEventListener("click", function() { afficherReponseNodeCover(1, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseNodeCover(1, "NON");}, false);
+            desactiverBouttonReponse()
             reponseNodeCover.innerHTML = "";
             break;
         case 2:
             network = new vis.Network(container, data1NodeCover, options);  
-            questionNodeCover.innerHTML = "G contient-il une clique de taille 4?";
+            questionNodeCover.innerHTML = "G contient-il une Node Cover de taille 2?";
             buttonOui.addEventListener("click", function() { afficherReponseNodeCover(2, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseNodeCover(2, "NON");}, false);
+            desactiverBouttonReponse()
             reponseNodeCover.innerHTML = "";
             break;
         case 3:
             network = new vis.Network(container, data2NodeCover, options);
-            questionNodeCover.innerHTML = "G contient-il une clique de taille 5?";
+            questionNodeCover.innerHTML = "G contient-il une Node Cover de taille 3?";
             buttonOui.addEventListener("click", function() { afficherReponseNodeCover(3, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseNodeCover(3, "NON");}, false);
+            desactiverBouttonReponse()
             reponseNodeCover.innerHTML = "";
             break;
         case 4:
             network = new vis.Network(container, data2NodeCover, options);
-            questionNodeCover.innerHTML = "G contient-il une clique de taille 4?";
+            questionNodeCover.innerHTML = "G contient-il une Node Cover de taille 4?";
             buttonOui.addEventListener("click", function() { afficherReponseNodeCover(4, "OUI");}, false);
             buttonNon.addEventListener("click", function() { afficherReponseNodeCover(4, "NON");}, false);
+            desactiverBouttonReponse()
             reponseNodeCover.innerHTML = "";
             break;
 
@@ -73,27 +77,27 @@ function afficherReponseNodeCover(numReponse, reponsePropose){
     switch (numReponse){
         case 1:
             if(reponsePropose == "OUI")
-                reponseNodeCover.innerHTML = "Juste: on voit bien les sommets 2,4 et 5 qui forment un triangle dans le graphe";
+                reponseNodeCover.innerHTML = "Bonne Réponse";
             else
-                reponseNodeCover.innerHTML = "Faux: provisoire: C'est VRAI";
+                reponseNodeCover.innerHTML = "Mauvaise Réponse: L'ensemble {1,4,5} couvre toutes les arêtes.";
             break;
         case 2:
             if(reponsePropose == "OUI")
-                reponseNodeCover.innerHTML = "provisoire: C'est FAUXX";
+                reponseNodeCover.innerHTML = "Mauvaise Réponse: Il n'existe aucun ensemble de sommets de taille 2 couvrant toutes les arêtes.";
             else
-                reponseNodeCover.innerHTML = "provisoire: C'est FAUX";
+                reponseNodeCover.innerHTML = "Bonne Réponse";
             break;
         case 3:
             if(reponsePropose == "OUI")
-                reponseNodeCover.innerHTML = "provisoire: C'est FAUXX";
+                reponseNodeCover.innerHTML = "Mauvaise Réponse: Il n'existe aucun ensemble de sommets de taille 3 couvrant toutes les arêtes.";
             else
-                reponseNodeCover.innerHTML = "provisoire: C'est FAUX";
+                reponseNodeCover.innerHTML = "Bonne Réponse";
             break;
         case 4:
             if(reponsePropose == "OUI")
-                reponseNodeCover.innerHTML = "provisoire: C'est VRAII";
+                reponseNodeCover.innerHTML = "Bonne Réponse";
             else
-                reponseNodeCover.innerHTML = "provisoire: C'est VRAI";
+                reponseNodeCover.innerHTML = "Mauvaise Réponse: L'ensemble {1,3,4,5} couvre toutes les arêtes.";
             break;
 
     }

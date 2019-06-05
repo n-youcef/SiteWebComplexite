@@ -75,27 +75,27 @@ function afficherReponseClique(numReponse, reponsePropose){
     switch (numReponse){
         case 1:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Bonne Réponse: on voit bien les sommets 2,4 et 5 qui forment un triangle dans le graphe";
+                reponseClique.innerHTML = "Bonne Réponse";
             else
-                reponseClique.innerHTML = "Mauvaise Réponse ";
+                reponseClique.innerHTML = "Mauvaise Réponse: Les sommets 2,4 et 5 forment un triangle dans le graphe";
             break;
         case 2:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Mauvaise Réponse car il n,existe pas de sous graphe complet de taille 4 dans ce graphe";
+                reponseClique.innerHTML = "Mauvaise Réponse: Il n'existe pas de sous graphe complet de taille 4 dans ce graphe";
             else
                 reponseClique.innerHTML = "Bonne Réponse";
             break;
         case 3:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Mauvaise Réponse : on a un graphe de 5 sommet non complet impossible d'avoir un clique de taille 5";
+                reponseClique.innerHTML = "Mauvaise Réponse : On a un graphe de 5 sommets non complet, il n'y a donc pas de clique de taille 5";
             else
                 reponseClique.innerHTML = "Bonne Réponse";
             break;
         case 4:
             if(reponsePropose == "OUI")
-                reponseClique.innerHTML = "Bonne Réponse: on voit bien les sommets 1,2,3 et 4 qui forment un sous graphe complet dans le graphe";
+                reponseClique.innerHTML = "Bonne Réponse";
             else
-                reponseClique.innerHTML = "Mauvaise Réponse";
+                reponseClique.innerHTML = "Mauvaise Réponse: : Les sommets 1,2,3 et 4 forment un sous graphe complet, on a donc une clique de taille 4.";
             break;
 
     }
